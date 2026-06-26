@@ -1,0 +1,15 @@
+---
+- name: Configure Apache Servers
+  hosts: apache
+  become: yes
+
+  roles:
+    - apache
+    - java
+
+- name: Configure Nginx Servers
+  hosts: nginx
+  become: yes
+
+  roles:
+    - nginx

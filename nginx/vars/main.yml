@@ -1,0 +1,3 @@
+package_name: nginx
+service_name: nginx
+web_root: /usr/share/nginx/html

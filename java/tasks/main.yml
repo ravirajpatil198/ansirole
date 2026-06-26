@@ -1,0 +1,14 @@
+---
+- name: Install Java
+  yum:
+    name: "{{ java_package }}"
+    state: present
+
+- name: Verify Java Installation
+  command: java -version
+  register: java_output
+  ignore_errors: yes
+
+- name: Display Java Version
+  debug:
+    var: java_output.stderr_lines
