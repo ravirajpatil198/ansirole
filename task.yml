@@ -1,5 +1,6 @@
 ---
 - name: Configure Apache Servers
+  remote_user: ravi
   hosts: apache
   become: yes
 
